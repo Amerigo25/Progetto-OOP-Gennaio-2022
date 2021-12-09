@@ -1,10 +1,10 @@
-package currencylayer;
+package com.progettoOOP.CurrencyLayer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProgettoOopGennaio2022ApplicationTests {
+class CurrencyLayerApplicationTests {
 
 	@Test
 	void contextLoads() {

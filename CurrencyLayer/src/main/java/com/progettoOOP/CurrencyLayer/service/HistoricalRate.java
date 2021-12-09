@@ -1,4 +1,4 @@
-package service;
+package com.progettoOOP.CurrencyLayer.service;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
 
@@ -6,21 +6,22 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import model.Day;
+import org.json.simple.parser.ParseException;
 
+import com.progettoOOP.CurrencyLayer.model.Day;
 
+import org.json.simple.JSONValue;
 public class HistoricalRate {
 	private final static String url_key ="http://api.currencylayer.com/historical?access_key=610f4eb38b7dfaab07250dfcf4b19601";
-	String s;
-	Day d;
-public HistoricalRate(String s,Day d ) {
-	this.s=s;
-	this.d=d;
+	String currency_list;
+	Day day;
+public HistoricalRate(String currency_list,Day day) {
+	this.currency_list=currency_list;
+	this.day=day;
 }
 	
 	//metodo che ottiene il JSON sotto forma di stringa
-	public String getJSON(String currency_list,Day day) {
+	public JSONObject getJSON() {
 		String pojo="";
 		JSONObject obj=null;
 		try {
@@ -36,22 +37,16 @@ public HistoricalRate(String s,Day d ) {
 		    	  pojo+=inputLine;
 		      }
 		      in.close();
-		     ////JSONParser parser = new JSONParser();
-		     ///obj =(JSONObject) parser.parse(pojo);
-		    
+
+				obj = (JSONObject) JSONValue.parseWithException(pojo);
 		    }
 		      catch(Exception e) {
 		    	  e.printStackTrace();
 		      }
-		return pojo;
+		return obj;
 		
 		
 		
 		}
-	}      
 
-	
-
-	
-
-
+}

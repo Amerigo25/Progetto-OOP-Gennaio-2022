@@ -1,13 +1,13 @@
-package currencylayer;
+package com.progettoOOP.CurrencyLayer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProgettoOopGennaio2022Application {
+public class CurrencyLayerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProgettoOopGennaio2022Application.class, args);
+		SpringApplication.run(CurrencyLayerApplication.class, args);
 	}
 
 }

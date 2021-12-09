@@ -1,4 +1,4 @@
-package model;
+package com.progettoOOP.CurrencyLayer.model;
 
 public class Day {
 	private String year;
@@ -30,5 +30,3 @@ public class Day {
 		this.day = day;
 	}
 }
-
-
