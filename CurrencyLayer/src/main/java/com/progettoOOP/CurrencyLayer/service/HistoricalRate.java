@@ -11,6 +11,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 
 import com.progettoOOP.CurrencyLayer.model.Day;
+import com.progettoOOP.CurrencyLayer.model.Quotes;
 
 import org.json.simple.JSONValue;
 
@@ -23,11 +24,9 @@ import org.json.simple.JSONValue;
 public class HistoricalRate implements HistoricalRateService{
 	private final static String Url ="http://api.currencylayer.com/historical?access_key=";
 	private final static String key = "610f4eb38b7dfaab07250dfcf4b19601";
-	private String currency_list;
-	private Day day;
-public HistoricalRate(String currency_list,Day day) {
-	this.currency_list=currency_list;
-	this.day=day;
+	private Quotes quotes;
+public HistoricalRate(Quotes quotes) {
+this.quotes=quotes;
 }
 	
 public JSONObject getJSON() {
@@ -35,8 +34,8 @@ public JSONObject getJSON() {
 		JSONObject obj=null;
 		try {
 			
-			URL url = new URL(Url+key+"&currencies="+ currency_list+"&date="+
-		    day.getYear()+"-"+day.getMonth()+"-"+day.getDay());
+			URL url = new URL(Url+key+"&currencies=" +quotes.getCurrency_list()+"&date="+
+		    quotes.getDay().getYear()+"-"+quotes.getDay().getMonth()+"-"+quotes.getDay().getDay());
 			HttpURLConnection conn = (HttpURLConnection)url.openConnection();
 		      conn.setRequestMethod("GET");
 		      conn.connect();
@@ -60,10 +59,10 @@ public JSONObject getJSON() {
 @SuppressWarnings("unchecked")
 public JSONObject getQuotes() {
 	JSONObject obj = getJSON();
-	JSONObject quotes= new JSONObject();
-	quotes.put("Quotes",obj.get("quotes"));
-	quotes.put("Date", this.day.toString());
-	return quotes;
+	JSONObject ex_rates= new JSONObject();
+	ex_rates.put("Quotes",obj.get("quotes"));
+	ex_rates.put("Date", quotes.getDay().toString());
+	return ex_rates;
 	}
 
 

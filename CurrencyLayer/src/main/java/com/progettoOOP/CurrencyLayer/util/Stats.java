@@ -2,6 +2,8 @@ package com.progettoOOP.CurrencyLayer.util;
 
 import java.util.Vector;
 
+import org.json.simple.JSONObject;
+
 public class Stats {
   private Vector <Double> quotes;
   
@@ -18,7 +20,7 @@ public class Stats {
   public double varianza() {
 	  double m = media();
 	  double sum = 0;
-	  for(int i=0; i<quotes.size(i);i++)
+	  for(int i=0; i<quotes.size();i++)
 		  sum+=(quotes.get(i)-m)*(quotes.get(i)-m);
 	  double varianza =sum/quotes.size();
 	  return varianza;
@@ -39,7 +41,16 @@ public class Stats {
 		  }
 	  return min;
   }
-  public String toString() {
-	  return "Media:"+ media() + "\n"+"Varianza"+varianza()+"\n"+"Min:"+min();
+  @SuppressWarnings("unchecked")
+public JSONObject JSONStats(String currency) {
+	JSONObject obj = new JSONObject();
+	obj.put("Currency", currency);
+    obj.put("Media",media());
+	obj.put("Varianza",varianza());
+
+	return obj;}
+			  
+
+
   }
-}
+

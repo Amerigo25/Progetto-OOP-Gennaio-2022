@@ -12,20 +12,34 @@ public class Filter {
 		this.currencies=currency_list.split(",");
 }
 	
-private JSONArray data;
+protected JSONArray data;
 
 	
-public String filteredStats(String currency){
+public JSONObject filteredStats(String currency){
 	Vector <Double> ex_rates=new Vector<Double>();
 	FileRead f = new FileRead();
 	data= f.getJSONfromFile();
-	//for(String currency:currencies) {
+
 		for(int i=0;i<data.size();i++) {
 			JSONObject obj=(JSONObject)data.get(i);
 			JSONObject quote =(JSONObject)obj.get("Quotes");
 			ex_rates.add((Double)quote.get("USD"+currency));
 		}
 		Stats stats = new Stats(ex_rates);
-		return stats.toString();
+		return stats.JSONStats(currency);
 		}
+@SuppressWarnings("unchecked")
+public JSONArray iterateFiltStats(){
+	JSONObject obj= new JSONObject();
+	JSONArray array = new JSONArray();
+	for( String currency: this.currencies) {
+		obj=filteredStats(currency);
+		array.add(obj);
+		}
+	
+		return array;
+		
+	}
+	
 }
+
