@@ -23,7 +23,7 @@ L'utente può effettuare un analisi storica richiedendo all'API il valore del ta
 A partire dai dati ricevuti si possono effettuare statistiche sull'andamento di un insieme di valute inserite in input, nei diversi mesi o anni dell'analisi storica, sempre rispetto all'USD (dollaro statunitense).
 <a name="plus"></a>
 ## Funzioni 
-* **Tasso di cambio storico **
+* **Tasso di cambio storico**
 * riferito a un giorno a scelta dell'utente dal 1990 ad oggi, su un set di valute scelto dall'utente rispetto all'USD
 * **Convertitore in euro**
 * di un qualsiasi ammontare di una certa valuta in un giorno scelto dall'utente con riferimento al tasso storico relativo a quel giorno.
