@@ -24,13 +24,13 @@ A partire dai dati ricevuti si possono effettuare statistiche sull'andamento di 
 <a name="plus"></a>
 ## Funzioni 
 * **Tasso di cambio storico**
-* riferito a un giorno a scelta dell'utente dal 1990 ad oggi, su un set di valute scelto dall'utente rispetto all'USD
+  In un giorno a scelta dell'utente dal 1990 ad oggi, su un set di valute scelto dall'utente, rispetto all'USD.
 * **Convertitore in euro**
-* di un qualsiasi ammontare di una certa valuta in un giorno scelto dall'utente con riferimento al tasso storico relativo a quel giorno.
+ Di un qualsiasi ammontare di una certa valuta in un giorno scelto dall'utente con riferimento al tasso storico di quel giorno.
 * **Statistiche annuali**
-* Media,varianza e scostamento medio del valore in dollari di un set di valute all'interno di un anno solare.
+ Media,varianza e scostamento medio del valore in dollari di un set di valute all'interno di un anno solare.
 * **Statistiche mensili**
-* Media,varianza e scostamento medio del valore in dollari di un set di valute nello stesso mese di diversi anni, per valutare il miglior periodo di investimento.
+ Media,varianza e scostamento medio del valore in dollari di un set di valute nello stesso mese di diversi anni, per valutare il miglior periodo di investimento.
 
 # Avvertenze :warning:
 Il programma è stato realizzato per un progetto d'esame universitario e sfrutta il pacchetto gratuito dell'API Currency Layer. Questo pacchetto permette all'utente di richiedere informazioni solamente su un singolo giorno, e non su un lasso di tempo entro due date (funzione a pagamento).
