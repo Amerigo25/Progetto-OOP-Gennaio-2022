@@ -50,7 +50,7 @@ N° | Tipo | Rotta | Descrizione
 [5](#5) | ` GET ` | `/stats/month` | *restituisce un JSONObject contenente le statistiche filtrate per il mese scelto*
 <a name="param"></a>
 ## Parametri 
-:warning: Le valute da inserire nel parametro *currency_list* vanno scritte con il relativo codice (vedi <a name="intro"></a>) e separate da virgole, il programma effettua distinzioni tra maiuscolo e minuscolo (vanno bene EUR,Eur,eur).
+:warning: Le valute da inserire nel parametro *currency_list* vanno scritte con il relativo codice (vedi [Descrizione](#intro)) e separate da virgole, il programma non effettua distinzioni tra maiuscolo e minuscolo (vanno bene EUR,Eur,eur).
 
 N° | Parametri | Tipo | Valore di default
 ----- | ------------ | -------------------- | ----------------------
