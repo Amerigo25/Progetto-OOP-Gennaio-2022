@@ -5,14 +5,28 @@ import java.util.Vector;
 import org.json.simple.JSONObject;
 
 import com.progettoOOP.CurrencyLayer.service.FileRead;
+/**
+ * Questa classe eredita da Filter, effettua il filtraggio dei dati secondo l'anno
+ * scelto dall'utente.
+ * @author Amerigo Aloisi
+ *
+ */
 
 public class FilterbyYear extends Filter{
 	int year;
+	/**
+	 *  Costruttore analogo a quello di Filter che chiede in più l'anno su cui filtrare
+	 * @param currency_list lista di valute inserita dall'utente (solita sintassi)
+	 * @param year anno inserito dall'utente, formato yyyy 
+	 */
 	public FilterbyYear(String currency_list,int year) {
 		super(currency_list);
 		this.year=year;}
-
-	
+	/**
+	 * Questo metodo ridefinisce quello definito nella superclasse Filter, per effettuare il filtraggio
+	 * per anno
+	 */
+@Override	
 public JSONObject filteredStats(String currency){
 	Vector <Double> ex_rates=new Vector<Double>();
 	FileRead f = new FileRead();

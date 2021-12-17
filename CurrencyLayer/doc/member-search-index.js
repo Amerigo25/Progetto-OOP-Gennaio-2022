@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"com.progettoOOP.CurrencyLayer.util","c":"FilterbyYear","l":"FilterbyYear(String, int)","u":"%3Cinit%3E(java.lang.String,int)"},{"p":"com.progettoOOP.CurrencyLayer.util","c":"FilterbyYear","l":"filteredStats(String)","u":"filteredStats(java.lang.String)"}];updateSearchResults();

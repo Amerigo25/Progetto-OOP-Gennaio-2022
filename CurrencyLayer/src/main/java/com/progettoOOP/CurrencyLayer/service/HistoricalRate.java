@@ -10,25 +10,38 @@ import org.json.simple.JSONObject;
 
 import org.json.simple.parser.ParseException;
 
-import com.progettoOOP.CurrencyLayer.model.Day;
 import com.progettoOOP.CurrencyLayer.model.Quotes;
 
 import org.json.simple.JSONValue;
-
-
-
-
-
-
+/**
+ * Questa classe implementa la relativa interfaccia
+ * @author Amerigo Aloisi
+ * @author Kristian Likaj
+ *
+ */
 
 public class HistoricalRate implements HistoricalRateService{
-	private final static String Url ="http://api.currencylayer.com/historical?access_key=";
-	private final static String key = "610f4eb38b7dfaab07250dfcf4b19601";
+	protected final static String Url ="http://api.currencylayer.com/historical?access_key=";
+	/**
+	 * Si ricorda di riscrivere questa variabile con la propria key personale
+	 * ottenibile iscrivendosi gratuitamente su currencylayer.com
+	 */
+	protected final static String key = "610f4eb38b7dfaab07250dfcf4b19601";
 	private Quotes quotes;
+	/**
+	 * Costruttore che prende in ingresso un oggetto di tipo Quotes
+	 * contenente a sua volta i parametri della richiesta
+	 * @param quotes
+	 */
 public HistoricalRate(Quotes quotes) {
 this.quotes=quotes;
 }
-	
+	/**
+	 * Questo metodo stabilisce la connessione URL al server dell'API ed effettua la richiesta 
+	 * con i parametri specificati dall'oggetto Quotes, copia la risposta in una stringa
+	 * ed effettua poi il parsing di quest'ultima in un JSONObject
+	 */
+@Override
 public JSONObject getJSON() {
 		String pojo="";
 		JSONObject obj=null;
@@ -55,8 +68,14 @@ public JSONObject getJSON() {
 		      }
 		return obj;
 		}
-
+/**
+ * Questo metodo richiama il metodo precedente, in seguito crea un JSONObject contenente 
+ * i valori di interesse della risposta totale dell'API (Key:"Quotes") e la data a cui fanno 
+ * riferimento (presa come parametro dall'oggetto Quotes)
+ */
+@Override
 @SuppressWarnings("unchecked")
+
 public JSONObject getQuotes() {
 	JSONObject obj = getJSON();
 	JSONObject ex_rates= new JSONObject();
