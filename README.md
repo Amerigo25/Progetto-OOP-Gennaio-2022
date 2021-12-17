@@ -17,7 +17,7 @@ L'applicazione nasce con l'obiettivo di fornire uno strumento tecnico che possa 
 ## Descrizione 
 
 L'applicazione utilizza i dati ricevuti dall'API Currency Layer, che fornisce informazioni aggiornate quotidianamente sul valore di più di 160 valute in tutto il mondo, inclusi due metalli preziosi, rispetto al dollaro statunitense. 
-**Una lista di tutte le valute supportate con il relativo codice identificativo (tre lettere in maiuscolo) da inserire nell'app è disponibile al seguente link: https://currencylayer.com/currencies .**
+**Una lista di tutte le valute supportate con il relativo codice identificativo (tre lettere) da inserire nell'app è disponibile al seguente link: https://currencylayer.com/currencies .**
 
 L'utente può effettuare un analisi storica richiedendo all'API il valore del tasso di cambio di una valuta rispetto al dollaro in un qualsiasi giorno nell'arco di tempo che va dal 1990 ad oggi.
 A partire dai dati ricevuti si possono effettuare statistiche sull'andamento di un insieme di valute inserite in input, nei diversi mesi o anni dell'analisi storica, sempre rispetto all'USD (dollaro statunitense).
@@ -50,6 +50,8 @@ N° | Tipo | Rotta | Descrizione
 [5](#5) | ` GET ` | `/stats/month` | *restituisce un JSONObject contenente le statistiche filtrate per il mese scelto*
 <a name="param"></a>
 ## Parametri 
+:warning: Le valute da inserire nel parametro *currency_list* vanno scritte con il relativo codice (vedi <a name="intro"></a>) e separate da virgole, il programma effettua distinzioni tra maiuscolo e minuscolo (vanno bene EUR,Eur,eur).
+
 N° | Parametri | Tipo | Valore di default
 ----- | ------------ | -------------------- | ----------------------
 [1](#1) | `currency_list,year,month,day` | *String, int, String, String* | *"EUR,GBP,BTC",2021,"12","01"*
