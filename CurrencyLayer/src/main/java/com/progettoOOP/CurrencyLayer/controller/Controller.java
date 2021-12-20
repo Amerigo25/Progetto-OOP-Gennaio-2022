@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import com.progettoOOP.CurrencyLayer.service.HistoricalRate;
 
 import com.progettoOOP.CurrencyLayer.model.Day;
+import com.progettoOOP.CurrencyLayer.model.EURConverter;
 import com.progettoOOP.CurrencyLayer.model.Quotes;
 import com.progettoOOP.CurrencyLayer.util.Filter;
 import com.progettoOOP.CurrencyLayer.util.FilterbyMonth;
@@ -84,6 +85,20 @@ return new ResponseEntity<> ((h.getQuotes()),HttpStatus.OK);
 		
 	return new ResponseEntity<>(f.iterateFiltStats(),HttpStatus.OK);}
 	
+	
+	
+	@GetMapping("/convert")
+	public ResponseEntity<Object> convert(
+			@RequestParam (name="currency",defaultValue="GBP")String currency,
+			@RequestParam (name="amount",defaultValue="1.0") double amount,
+			@RequestParam (name = "year", defaultValue = "2021") int year, 
+			@RequestParam (name = "month", defaultValue = "01") String month,
+			@RequestParam (name = "day", defaultValue = "01") String day)
+			{
+		HistoricalRate h = new HistoricalRate(new Quotes(currency,new Day(year,month,day)));
+		EURConverter converter = new EURConverter(h.getQuotes(),currency,amount);
+
+	return new ResponseEntity<>(converter.EURconvert(),HttpStatus.OK);}
 	
 	
 	}
