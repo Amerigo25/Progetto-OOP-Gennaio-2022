@@ -1,5 +1,196 @@
 [
-
+{
+    "Quotes": {
+        "USDEUR": 0.872505,
+        "USDGBP": 0.7841,
+        "USDBTC": 2.6E-4
+    },
+    "Date": "01-01-2019"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.872795,
+        "USDGBP": 0.763885,
+        "USDBTC": 2.89E-4
+    },
+    "Date": "01-02-2019"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.878925,
+        "USDGBP": 0.75704,
+        "USDBTC": 2.61E-4
+    },
+    "Date": "01-03-2019"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.892435,
+        "USDGBP": 0.76523,
+        "USDBTC": 2.41E-4
+    },
+    "Date": "01-04-2019"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.892825,
+        "USDGBP": 0.766202,
+        "USDBTC": 1.86E-4
+    },
+    "Date": "01-05-2019"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.89298,
+        "USDGBP": 0.791265,
+        "USDBTC": 1.17E-4
+    },
+    "Date": "01-06-2019"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.88597,
+        "USDGBP": 0.79089,
+        "USDBTC": 9.4762981E-5
+    },
+    "Date": "01-07-2019"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.902655,
+        "USDGBP": 0.82484,
+        "USDBTC": 9.6176929E-5
+    },
+    "Date": "01-08-2019"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.90981,
+        "USDGBP": 0.822465,
+        "USDBTC": 1.02E-4
+    },
+    "Date": "01-09-2019"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.914535,
+        "USDGBP": 0.81357,
+        "USDBTC": 1.2E-4
+    },
+    "Date": "01-10-2019"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.893455,
+        "USDGBP": 0.772678,
+        "USDBTC": 1.08E-4
+    },
+    "Date": "01-11-2019"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.907555,
+        "USDGBP": 0.774455,
+        "USDBTC": 1.29E-4
+    },
+    "Date": "01-12-2019"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.891401,
+        "USDGBP": 0.754802,
+        "USDBTC": 1.39E-4
+    },
+    "Date": "01-01-2020"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.901364,
+        "USDGBP": 0.757312,
+        "USDBTC": 1.07E-4
+    },
+    "Date": "01-02-2020"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.904905,
+        "USDGBP": 0.780865,
+        "USDBTC": 1.15E-4
+    },
+    "Date": "01-03-2020"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.91299,
+        "USDGBP": 0.807699,
+        "USDBTC": 1.5E-4
+    },
+    "Date": "01-04-2020"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.901429,
+        "USDGBP": 0.799872,
+        "USDBTC": 1.41E-4
+    },
+    "Date": "01-05-2020"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.89883,
+        "USDGBP": 0.80088,
+        "USDBTC": 9.802047E-5
+    },
+    "Date": "01-06-2020"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.88881,
+        "USDGBP": 0.802315,
+        "USDBTC": 1.08E-4
+    },
+    "Date": "01-07-2020"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.848896,
+        "USDGBP": 0.764213,
+        "USDBTC": 8.4522003E-5
+    },
+    "Date": "01-08-2020"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.838725,
+        "USDGBP": 0.746335,
+        "USDBTC": 8.3881308E-5
+    },
+    "Date": "01-09-2020"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.851455,
+        "USDGBP": 0.77607,
+        "USDBTC": 9.4137542E-5
+    },
+    "Date": "01-10-2020"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.858995,
+        "USDGBP": 0.77356,
+        "USDBTC": 7.2669829E-5
+    },
+    "Date": "01-11-2020"
+}
+{
+    "Quotes": {
+        "USDEUR": 0.828303,
+        "USDGBP": 0.74506,
+        "USDBTC": 5.3171242E-5
+    },
+    "Date": "01-12-2020"
+}
 {
     "Quotes": {
         "USDEUR": 0.821304,
