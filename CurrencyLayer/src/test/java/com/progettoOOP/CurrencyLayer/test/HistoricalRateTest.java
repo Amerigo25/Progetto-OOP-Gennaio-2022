@@ -9,7 +9,12 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import com.progettoOOP.CurrencyLayer.service.HistoricalRate;
 import com.progettoOOP.CurrencyLayer.model.*;
- class HistoricalRateTest {
+ /**
+  * Questa classe testa il metodo che effettua la chiamata API salvandola su un JSONObject, da cui poi  preleva  i campi di interesse
+  * @author Amerigo Aloisi
+  *
+  */
+class HistoricalRateTest {
 	 private HistoricalRate h;
 	 private JSONObject obj,quotes;
 
@@ -26,6 +31,9 @@ void setUp()throws Exception{
 void tearDown()throws Exception{
 	
 }
+/**
+ * Questo metodo verifica la correttezza dei dati ottenuti dalla chiamata API
+ */
 @SuppressWarnings("unchecked")
 @Test
 @DisplayName("Chiamata api andata a buon fine")

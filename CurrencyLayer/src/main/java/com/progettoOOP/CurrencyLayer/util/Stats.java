@@ -43,22 +43,18 @@ public class Stats {
 	  double varianza =sum/quotes.size();
 	  return varianza;
   }
-  public double max() {
-	  double max=0;
-	  for(int i = 0; i<quotes.size();i++) {
-		  if(max<=quotes.get(i))
-			  max=quotes.get(i);
-	  }
-	  return max;
-  }
-  public double min() {
-	  double min = quotes.get(0);
-	  for(int i=1;i<quotes.size();i++) {
-		  if(min>=quotes.get(i))
-			  min=quotes.get(i);
-		  }
-	  return min;
-  }
+  /**
+   * Metodo che calcola lo scostamento medio
+   */
+ public double scost_medio() {
+	 double m=media();
+	 double sum=0;
+	 for(int i=0;i<quotes.size();i++) {
+		 sum +=Math.abs(quotes.get(i)-m);
+	 }
+	 double result=sum/quotes.size();
+	 return result;
+ }
   
   /**
    * questo metodo restituisce le statistiche formattate in un JSONObject 
@@ -69,11 +65,11 @@ public class Stats {
    */
   @SuppressWarnings("unchecked")
 public JSONObject JSONStats(String currency) {
-	JSONObject obj = new JSONObject();
+ JSONObject obj = new JSONObject();
 	obj.put("Currency", currency);
     obj.put("Media",media());
 	obj.put("Varianza",varianza());
-
+    obj.put("Scostamento medio",scost_medio());
 	return obj;}
 			  
 

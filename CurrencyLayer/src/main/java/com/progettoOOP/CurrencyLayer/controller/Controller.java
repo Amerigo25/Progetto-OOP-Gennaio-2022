@@ -84,7 +84,16 @@ return new ResponseEntity<> ((h.getQuotes()),HttpStatus.OK);
 		FilterbyMonth f = new FilterbyMonth(currency_list,month);
 		
 	return new ResponseEntity<>(f.iterateFiltStats(),HttpStatus.OK);}
-	
+	  
+	/**
+	 * Rotta di tipo GET che effettua la conversione in Euro di un ammontare di una valuta scelta dall'utente, con riferimento al tasso di cambio nel giorno scelto
+	 * @param currency valuta di partenza
+	 * @param amount quantità della valuta
+	 * @param year anno di riferimento
+	 * @param month mese di riferimento
+	 * @param day giorno di riferimento
+	 * @return un JSONObject contenente il risultato della conversione
+	 */
 	
 	
 	@GetMapping("/convert")
