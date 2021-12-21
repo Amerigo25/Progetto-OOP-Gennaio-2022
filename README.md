@@ -8,7 +8,6 @@ L'applicazione nasce con l'obiettivo di fornire uno strumento tecnico che possa 
 * [Rotte](#rotte)
 * [Parametri](#param)
 * [Formato restituto](#form)
-* [Eccezioni](#eccez)
 * [Test](#test)
 * [Documentazione](#doc)
 * [Autori](#autor)
@@ -34,32 +33,83 @@ A partire dai dati ricevuti si possono effettuare statistiche sull'andamento di 
 
 # Avvertenze :warning:
 Il programma è stato realizzato per un progetto d'esame universitario e sfrutta il pacchetto gratuito dell'API Currency Layer. Questo pacchetto permette all'utente di richiedere informazioni solamente su un singolo giorno, e non su un lasso di tempo entro due date (funzione a pagamento).
-Per questo motivo per provare il funzionamento delle statistiche su periodi estesi l'applicazione sfrutta un file incluso nella directory del programma **"quotes.list.txt**, dove sono stati salvati dati relativi al valore di 3 valute: *EUR,GBP,BTC* 
-nei 12 mesi degli ultimi 3 anni: *2019,2020,2021*.
+Per questo motivo per provare il funzionamento delle statistiche su periodi estesi l'applicazione sfrutta un file incluso nella directory del programma **"quotes.list.txt**, dove sono stati salvati dati relativi al valore di 3 valute: *EUR,GBP,BTC* (uniche ammesse per le rotte /stats)  
+nei 12 mesi degli ultimi 3 anni: *2019,2020,2021* (unici ammessi per la rotta /stats/year).
 L'utente che fosse interessato ad ottenere un servizio completo può liberamente acquistare la versione a pagamento dell'API ed effettuare una lieve modifica al codice, che invece di andare a leggere da file locale i dati per il calcolo delle statistiche andrebbe a chiederli direttamente all'API come fa già per le funzioni gratuite.
+Infine si ricorda che per utilizzare il programma si deve modificare la variabile "key" nella classe HistoricalRate contenuta nel package CurrencyLayer\src\main\java\com\progettoOOP\CurrencyLayer\service sostituendola con la propria key ottenibile gratuitamente iscrivendosi su https://currencylayer.com/product.
 
 <a name="rotte"></a>
 ## Rotte 
 Le richieste vanno effettuate all'indirizzo http://localhost:8080
+
 N° | Tipo | Rotta | Descrizione
 ----- | ------------ | -------------------- | ----------------------
-[1](#1) | ` GET ` | `/exhcange` | *restituisce un JSONObject contenente i tassi di cambio delle valute richieste al giorno indicato*
+[1](#1) | ` GET ` | `/exhcange` | *restituisce un JSONObject contenente i tassi di cambio delle valute richieste, al giorno indicato*
 [2](#2) | ` GET ` | `/convert` | *restituisce un JSONObject contente il risultato della conversione in euro al giorno indicato*
-[3](#3) | ` GET ` | `/stats | *restituisce un JSONObject contenente le statistiche filtrate per il periodo di default (ultimi tre anni)*
+[3](#3) | ` GET ` | `/stats` | *restituisce un JSONObject contenente le statistiche filtrate per il periodo di default (ultimi tre anni)*
 [4](#4) | ` GET ` | `/stats/year` | *restituisce un JSONObject contenente le statistiche filtrate per l'anno scelto*
 [5](#5) | ` GET ` | `/stats/month` | *restituisce un JSONObject contenente le statistiche filtrate per il mese scelto*
 <a name="param"></a>
 ## Parametri 
-:warning: Le valute da inserire nel parametro *currency_list* vanno scritte con il relativo codice (vedi [Descrizione](#intro)) e separate da virgole, il programma non effettua distinzioni tra maiuscolo e minuscolo (vanno bene EUR,Eur,eur).
+:warning: Le valute da inserire nel parametro *currency_list* vanno scritte con il relativo codice (vedi [Descrizione](#intro)) e separate da virgole.
 
-N° | Parametri | Tipo | Valore di default
+
+N° | Parametri | Tipo | Valore di default |
 ----- | ------------ | -------------------- | ----------------------
-[1](#1) | `currency_list,year,month,day` | *String, int, String, String* | *"EUR,GBP,BTC",2021,"12","01"*
-[2](#2) | `amount,currency,year,month,day` | *double,String,int,String,String* | *1.0,GBP,2021,"12","01"*
-[3](#3) | `currency_list` | *String* |*"EUR,GBP,BTC"*
-[4](#4) | `currency_list,year` | *int* |* "EUR,GBP,BTC",2021*
-[5](#5) | `currency_list,month` | *int* | *"EUR,GBP,BTC","06"
+[1](#1) | `currency_list,year,month,day` | *String, int, String, String* | * "EUR,GBP,BTC",2021, 01 ,01 * |
+[2](#2) | `amount,currency,year,month,day` | *double,String,int,String,String* | * 1,"GBP",2021,01,01 * |
+[3](#3) | `currency_list` | *String* |* "EUR,GBP,BTC" * | 
+[4](#4) | `currency_list,year` | *String,int* |* "EUR,GBP,BTC",2021* |
+[5](#5) | `currency_list,month` | *String,int* | * "EUR,GBP,BTC", 06 |
 
+<a name="form"></a>
+## Formato restituito (valori di Default)
+<a name=1></a>
+### 1. Exchange
+```json
+{
+    "Quotes": {
+        "USDEUR": 0.821304,
+        "USDGBP": 0.731368,
+        "USDBTC": 3.4075045E-5
+    },
+    "Date": "01-01-2021"
+}
+```
+
+<a name=2></a>
+### 2. Convert
+```json
+{
+    "result": "1.2168976493365857 EUR",
+    "input": "1.0 GBP"
+}
+```
+### 3. Stats
+```json
+[
+    {
+        "Scostamento medio": 5.190534833333332E-6,
+        "Currency": "BTC",
+        "Media": 2.2956204E-5,
+        "Varianza": 3.329386925975467E-11
+    },
+    {
+        "Scostamento medio": 0.014385083333333326,
+        "Currency": "EUR",
+        "Media": 0.8432437499999997,
+        "Varianza": 3.324545058541665E-4
+    },
+    {
+        "Scostamento medio": 0.008117041666666694,
+        "Currency": "GBP",
+        "Media": 0.7274747500000002,
+        "Varianza": 1.2109563668749997E-4
+    }
+]
+```
+### 4.Stats by Year
+### 5.Stats by Month
 
 
 
