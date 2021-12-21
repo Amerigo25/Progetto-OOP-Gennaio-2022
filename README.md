@@ -89,6 +89,29 @@ N° | Parametri | Tipo | Valore di default |
 ```json
 [
     {
+        "Scostamento medio": 5.589174712345682E-5,
+        "Currency": "BTC",
+        "Media": 9.793935422222226E-5,
+        "Varianza": 5.476449991604284E-9
+    },
+    {
+        "Scostamento medio": 0.026477135802469128,
+        "Currency": "EUR",
+        "Media": 0.8711520277777779,
+        "Varianza": 8.704672216381178E-4
+    },
+    {
+        "Scostamento medio": 0.026637722222222236,
+        "Currency": "GBP",
+        "Media": 0.7629249999999999,
+        "Varianza": 0.0010126013654444448
+    }
+]
+```
+### 4.Stats by Year
+```json
+[
+    {
         "Scostamento medio": 5.190534833333332E-6,
         "Currency": "BTC",
         "Media": 2.2956204E-5,
@@ -108,9 +131,29 @@ N° | Parametri | Tipo | Valore di default |
     }
 ]
 ```
-### 4.Stats by Year
 ### 5.Stats by Month
-
+```json
+[
+    {
+        "Scostamento medio": 7.709443444444444E-5,
+        "Currency": "BTC",
+        "Media": 1.4435834833333332E-4,
+        "Varianza": 8.521370163722672E-9
+    },
+    {
+        "Scostamento medio": 0.02695511111111108,
+        "Currency": "EUR",
+        "Media": 0.8617366666666667,
+        "Varianza": 8.769100695555544E-4
+    },
+    {
+        "Scostamento medio": 0.018228888888888888,
+        "Currency": "GBP",
+        "Media": 0.7567566666666666,
+        "Varianza": 4.653543315555556E-4
+    }
+]
+```
 
 
 
