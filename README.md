@@ -53,7 +53,7 @@ N° | Tipo | Rotta | Descrizione
 N° | Parametri | Tipo | Valore di Default |
 ----- | ------------ | -------------------- | ----------------------
 [1](#1) | `currency_list,year,month,day` | *String, int, String, String* | *"EUR,GBP,BTC", 2021, "01" , "01"* |
-[2](#2) | `amount,currency,year,month,day` | *double,String,int,String,String* | *1.0, "GBP", 2021, "01", "01"* |
+[2](#2) | `amount,currency,year,month,day` | *double,String,int,String,String* | *1.00, "GBP", 2021, "01", "01"* |
 [3](#3) | `currency_list` | *String* |*"EUR,GBP,BTC"* | 
 [4](#4) | `currency_list,year` | *String,int* |*"EUR,GBP,BTC", 2021* |
 [5](#5) | `currency_list,month` | *String,String* |*"EUR,GBP,BTC", "06"*|
@@ -78,7 +78,7 @@ N° | Parametri | Tipo | Valore di Default |
 ```json
 {
     "result": "1.2168976493365857 EUR",
-    "input": "1.0 GBP"
+    "input": "1.00 GBP"
 }
 ```
 ### 3. Stats
@@ -154,7 +154,7 @@ N° | Parametri | Tipo | Valore di Default |
 <a name="test"></a>
 ## Test
 Per verificare il funzionamento del programma sono state implementate 3 classi di test tramite utilizzo del framework JUNIT.
-* **HistoricalRateTest** verifica la correttezza della chiamata API e del salvataggio della risposta in un JSONObject-
+* **HistoricalRateTest** verifica la correttezza della chiamata API e del salvataggio della risposta in un JSONObject.
 * **FileReadTest** verifica la correttezza della lettura da file e del salvataggio del contenuto in un JSONArray.
 * **FilterTest** verifica la correttezza del metodo di filtraggio che dal JSONArray salva i valori dei tassi di cambio su un Vector di variabili Double.
 
