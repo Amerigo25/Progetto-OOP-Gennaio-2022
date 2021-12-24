@@ -50,13 +50,13 @@ N° | Tipo | Rotta | Descrizione
 :warning: Le valute da inserire nel parametro *currency_list* vanno scritte con il relativo codice (vedi [Descrizione](#intro)) e separate da virgole.
 
 
-N° | Parametri | Tipo | Valore di default |
+N° | Parametri | Tipo | Valore di Default |
 ----- | ------------ | -------------------- | ----------------------
-[1](#1) | `currency_list,year,month,day` | *String, int, String, String* | *"EUR,GBP,BTC",2021,"01" ,"01"* |
-[2](#2) | `amount,currency,year,month,day` | *double,String,int,String,String* | *1,"GBP",2021,"01","01"* |
+[1](#1) | `currency_list,year,month,day` | *String, int, String, String* | *"EUR,GBP,BTC", 2021, "01" , "01"* |
+[2](#2) | `amount,currency,year,month,day` | *double,String,int,String,String* | *1.0, "GBP", 2021, "01", "01"* |
 [3](#3) | `currency_list` | *String* |*"EUR,GBP,BTC"* | 
-[4](#4) | `currency_list,year` | *String,int* |*"EUR,GBP,BTC",2021* |
-[5](#5) | `currency_list,month` | *String,int* |*"EUR,GBP,BTC","06"*|
+[4](#4) | `currency_list,year` | *String,int* |*"EUR,GBP,BTC", 2021* |
+[5](#5) | `currency_list,month` | *String,String* |*"EUR,GBP,BTC", "06"*|
 
 <a name="form"></a>
 ## Formato restituito (valori di Default)
