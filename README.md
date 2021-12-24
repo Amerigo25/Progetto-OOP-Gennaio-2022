@@ -52,11 +52,11 @@ N° | Tipo | Rotta | Descrizione
 
 N° | Parametri | Tipo | Valore di default |
 ----- | ------------ | -------------------- | ----------------------
-[1](#1) | `currency_list,year,month,day` | *String, int, String, String* | * "EUR,GBP,BTC",2021, 01 ,01 * |
-[2](#2) | `amount,currency,year,month,day` | *double,String,int,String,String* | * 1,"GBP",2021,01,01 * |
-[3](#3) | `currency_list` | *String* |* "EUR,GBP,BTC" * | 
-[4](#4) | `currency_list,year` | *String,int* |* "EUR,GBP,BTC",2021* |
-[5](#5) | `currency_list,month` | *String,int* | * "EUR,GBP,BTC", 06 |
+[1](#1) | `currency_list,year,month,day` | *String, int, String, String* | *"EUR,GBP,BTC",2021,"01" ,"01"* |
+[2](#2) | `amount,currency,year,month,day` | *double,String,int,String,String* | *1,"GBP",2021,"01","01"* |
+[3](#3) | `currency_list` | *String* |*"EUR,GBP,BTC"* | 
+[4](#4) | `currency_list,year` | *String,int* |*"EUR,GBP,BTC",2021* |
+[5](#5) | `currency_list,month` | *String,int* |*"EUR,GBP,BTC","06"*|
 
 <a name="form"></a>
 ## Formato restituito (valori di Default)
