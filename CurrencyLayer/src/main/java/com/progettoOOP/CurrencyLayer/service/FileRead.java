@@ -27,27 +27,27 @@ public class FileRead implements FileReadService{
 	 * @return JSONArray
 	 */
 	@Override
-	 public JSONArray getJSONfromFile() {
-		 JSONArray Quotes = null;
-		 try {
-		 FileReader reader = new FileReader(file_name);
-		JSONParser parser = new JSONParser();
-		Object obj = parser.parse(reader);
-		
-		Quotes= new JSONArray();
-		return Quotes=(JSONArray)obj;}
-		
-		 catch (FileNotFoundException e) {
-				e.printStackTrace();
-			} 
-		 catch (IOException e) {
-				e.printStackTrace();
-			} 
-		 catch (ParseException e) {
-				e.printStackTrace();
-			}
-		 return Quotes;
-			
+	public JSONArray getJSONfromFile() {
+		JSONArray Quotes = null;
+		try {
+			FileReader reader = new FileReader(file_name);
+			JSONParser parser = new JSONParser();
+			Object obj = parser.parse(reader);
+
+			Quotes= new JSONArray();
+			return Quotes=(JSONArray)obj;}
+
+		catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} 
+		catch (IOException e) {
+			e.printStackTrace();
+		} 
+		catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return Quotes;
+
 	}
 }
 

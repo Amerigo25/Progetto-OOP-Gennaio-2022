@@ -37,12 +37,12 @@ public class FilterbyMonth extends Filter{
 			String[] values = day.split("-");
 			String m = values[1];
 			if(m.equals(month)) {
-			
-			JSONObject quote =(JSONObject)obj.get("Quotes");
-			ex_rates.add((Double)quote.get("USD"+currency));
-		}}
+
+				JSONObject quote =(JSONObject)obj.get("Quotes");
+				ex_rates.add((Double)quote.get("USD"+currency));
+			}}
 		Stats stats = new Stats(ex_rates);
 		return stats.JSONStats(currency);
-		}
+	}
 
 }

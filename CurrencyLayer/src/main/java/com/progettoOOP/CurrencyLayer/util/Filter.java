@@ -19,24 +19,24 @@ public class Filter {
 	 */
 	public Filter(String currency_list) {
 		this.currencies=currency_list.split(",");
-}
-/**
- * con il modificatore protected anche le classi che ereditano possono accedere a questa variabile
- */
-protected  JSONArray data;
-/**
- * Metodo che prende in ingresso il nome di una valuta, costruisce un vettore double contenente tutti i tassi di cambio di quella valuta
- * che sono nel file (senza filtri), in seguito da il vettore in ingresso al costruttore della classe stats.
- * Quest'ultima  ha un metodo per  calcolare le statistiche.
- * @param currency la singola valuta
- * @return un JSONObject  contenente le statistiche della singola valuta.
- */
+	}
+	/**
+	 * con il modificatore protected anche le classi che ereditano possono accedere a questa variabile
+	 */
+	protected  JSONArray data;
+	/**
+	 * Metodo che prende in ingresso il nome di una valuta, costruisce un vettore double contenente tutti i tassi di cambio di quella valuta
+	 * che sono nel file (senza filtri), in seguito da il vettore in ingresso al costruttore della classe stats.
+	 * Quest'ultima  ha un metodo per  calcolare le statistiche.
+	 * @param currency la singola valuta
+	 * @return un JSONObject  contenente le statistiche della singola valuta.
+	 */
 
-	
-public JSONObject filteredStats(String currency){
-	Vector <Double> ex_rates=new Vector<Double>();
-	FileRead f = new FileRead();
-	data= f.getJSONfromFile();
+
+	public JSONObject filteredStats(String currency){
+		Vector <Double> ex_rates=new Vector<Double>();
+		FileRead f = new FileRead();
+		data= f.getJSONfromFile();
 
 		for(int i=0;i<data.size();i++) {
 			JSONObject obj=(JSONObject)data.get(i);
@@ -45,24 +45,24 @@ public JSONObject filteredStats(String currency){
 		}
 		Stats stats = new Stats(ex_rates);
 		return stats.JSONStats(currency);
+	}
+
+	/**
+	 * Metodo che itera i passaggi del metodo precedente per ogni valuta dell'array currencies
+	 * @return un JSONArray contenente un JSONObject come quello di cui sopra, per ogni valuta dell'array in ingresso
+	 */
+	@SuppressWarnings("unchecked")
+	public JSONArray iterateFiltStats(){
+		JSONObject obj= new JSONObject();
+		JSONArray array = new JSONArray();
+		for( String currency: this.currencies) {
+			obj=filteredStats(currency);
+			array.add(obj);
 		}
 
-/**
- * Metodo che itera i passaggi del metodo precedente per ogni valuta dell'array currencies
- * @return un JSONArray contenente un JSONObject come quello di cui sopra, per ogni valuta dell'array in ingresso
- */
-@SuppressWarnings("unchecked")
-public JSONArray iterateFiltStats(){
-	JSONObject obj= new JSONObject();
-	JSONArray array = new JSONArray();
-	for( String currency: this.currencies) {
-		obj=filteredStats(currency);
-		array.add(obj);
-		}
-	
 		return array;
-		
+
 	}
-	
+
 }
 

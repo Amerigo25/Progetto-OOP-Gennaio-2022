@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.progettoOOP.CurrencyLayer"},{"l":"com.progettoOOP.CurrencyLayer.controller"},{"l":"com.progettoOOP.CurrencyLayer.model"},{"l":"com.progettoOOP.CurrencyLayer.service"},{"l":"com.progettoOOP.CurrencyLayer.test"},{"l":"com.progettoOOP.CurrencyLayer.util"}];updateSearchResults();

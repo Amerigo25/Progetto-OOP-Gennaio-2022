@@ -37,25 +37,25 @@ public class Controller {
 			@RequestParam (name = "year", defaultValue = "2021") int year, 
 			@RequestParam (name = "month", defaultValue = "01") String month,
 			@RequestParam (name = "day", defaultValue = "01") String day)
-			  {
-HistoricalRate h = new HistoricalRate(new Quotes(currency_list,new Day(year,month,day)));
-	
-return new ResponseEntity<> ((h.getQuotes()),HttpStatus.OK);
-}
+	{
+		HistoricalRate h = new HistoricalRate(new Quotes(currency_list,new Day(year,month,day)));
+
+		return new ResponseEntity<> ((h.getQuotes()),HttpStatus.OK);
+	}
 	/**
 	 * Rotta di tipo GET che calcola le statistiche sulle valute in ingresso sul periodo di default (2019,2020,2021)
 	 * @param currency_list insieme di valute in ingresso
 	 * @return un JSONArray contente un JSONObject per ogni valuta, contenente a sua volta nome, media e varianza della valuta
 	 */
-	
+
 	@GetMapping ("/stats")
-	
+
 	public ResponseEntity<Object> getStats(
 			@RequestParam (name="currency_list",defaultValue="BTC,EUR,GBP")String currency_list){
 		Filter f = new Filter(currency_list);
-		
-	return new ResponseEntity<>(f.iterateFiltStats(),HttpStatus.OK);}
-	
+
+		return new ResponseEntity<>(f.iterateFiltStats(),HttpStatus.OK);}
+
 	/**
 	 * Rotta di tipo GET che calcola le statistiche sulle valute in ingresso nell'anno scelto
 	 * @param currency_list insieme di valute in ingresso
@@ -67,10 +67,10 @@ return new ResponseEntity<> ((h.getQuotes()),HttpStatus.OK);
 			@RequestParam (name="currency_list",defaultValue="BTC,EUR,GBP")String currency_list,
 			@RequestParam(name="year",defaultValue="2021")int year){
 		FilterbyYear f = new FilterbyYear(currency_list,year);
-		
-	return new ResponseEntity<>(f.iterateFiltStats(),HttpStatus.OK);}
-	
-	
+
+		return new ResponseEntity<>(f.iterateFiltStats(),HttpStatus.OK);}
+
+
 	/**
 	 * Rotta di tipo GET che calcola le statistiche sulle valute in ingresso nello stesso mese negli ultimi anni
 	 * @param currency_list insieme di valute in ingresso
@@ -82,9 +82,9 @@ return new ResponseEntity<> ((h.getQuotes()),HttpStatus.OK);
 			@RequestParam (name="currency_list",defaultValue="BTC,EUR,GBP")String currency_list,
 			@RequestParam(name="month",defaultValue="01")String month){
 		FilterbyMonth f = new FilterbyMonth(currency_list,month);
-		
-	return new ResponseEntity<>(f.iterateFiltStats(),HttpStatus.OK);}
-	  
+
+		return new ResponseEntity<>(f.iterateFiltStats(),HttpStatus.OK);}
+
 	/**
 	 * Rotta di tipo GET che effettua la conversione in Euro di un ammontare di una valuta scelta dall'utente, con riferimento al tasso di cambio nel giorno scelto
 	 * @param currency valuta di partenza
@@ -94,23 +94,23 @@ return new ResponseEntity<> ((h.getQuotes()),HttpStatus.OK);
 	 * @param day giorno di riferimento
 	 * @return un JSONObject contenente il risultato della conversione
 	 */
-	
-	
+
+
 	@GetMapping("/convert")
 	public ResponseEntity<Object> convert(
 			@RequestParam (name="currency",defaultValue="GBP")String currency,
-			@RequestParam (name="amount",defaultValue="1.0") double amount,
+			@RequestParam (name="amount",defaultValue="1.00") double amount,
 			@RequestParam (name = "year", defaultValue = "2021") int year, 
 			@RequestParam (name = "month", defaultValue = "01") String month,
 			@RequestParam (name = "day", defaultValue = "01") String day)
-			{
+	{
 		HistoricalRate h = new HistoricalRate(new Quotes(currency,new Day(year,month,day)));
 		EURConverter converter = new EURConverter(h.getQuotes(),currency,amount);
 
-	return new ResponseEntity<>(converter.EURconvert(),HttpStatus.OK);}
-	
-	
-	}
+		return new ResponseEntity<>(converter.EURconvert(),HttpStatus.OK);}
+
+
+}
 
 
 

@@ -15,45 +15,45 @@ import com.progettoOOP.CurrencyLayer.util.Filter;
  * @author Amerigo Aloisi
  *
  */
- class FilterTest {
-	 private Filter f;
-	 private JSONObject obj;
-	
-	 private JSONArray array;
+class FilterTest {
+	private Filter f;
+	private JSONObject obj;
 
-	 private double value1,value2;
-	 @BeforeEach
-	 void setUp()throws Exception{
-	 f=new Filter("EUR");
-	 array=new JSONArray();
-	 obj=new JSONObject();
-	 
-	 
+	private JSONArray array;
 
-	 }
-	 @AfterEach
-	 void tearDown()throws Exception{
-	 	
-	 }
-	 /**
-	  * Questo metodo verifica la correttezza dei dati raccolti per il calcolo di statistiche 
-	  */
-	 @Test
-	 @DisplayName("Filtraggio dati e calcolo statistiche andato a buon fine")
-	 void getQuotesTest() {
-	 	value1=0.8711520277777779;
-	 	array=f.iterateFiltStats();
-	 	obj=(JSONObject)array.get(0);
-	 	value2=(Double)obj.get("Media");
-	 	
-	 	
-	 	 assertEquals(value1,value2);
-	     
-	    
-	 		
-	 	
-	 }
-	 
-	
+	private double value1,value2;
+	@BeforeEach
+	void setUp()throws Exception{
+		f=new Filter("EUR");
+		array=new JSONArray();
+		obj=new JSONObject();
+
+
+
+	}
+	@AfterEach
+	void tearDown()throws Exception{
+
+	}
+	/**
+	 * Questo metodo verifica la correttezza dei dati raccolti per il calcolo di statistiche 
+	 */
+	@Test
+	@DisplayName("Filtraggio dati e calcolo statistiche andato a buon fine")
+	void getQuotesTest() {
+		value1=0.8711520277777779;
+		array=f.iterateFiltStats();
+		obj=(JSONObject)array.get(0);
+		value2=(Double)obj.get("Media");
+
+
+		assertEquals(value1,value2);
+
+
+
+
+	}
+
+
 
 }

@@ -24,31 +24,31 @@ public class EURConverter {
 		this.currency=currency;
 		this.amount=amount;
 	}
-	
+
 	/**
 	 * Questo metodo preleva dal JSONObject il tasso di cambio della valuta inserita rispetto al dollaro, e poi effettua la conversione in euro
 	 * @return un JSONObject contenente il risultato della conversione
 	 */
-	
-@SuppressWarnings("unchecked")
-public JSONObject EURconvert(){
-	
+
+	@SuppressWarnings("unchecked")
+	public JSONObject EURconvert(){
+
 		JSONObject rate  = (JSONObject)obj.get("Quotes");
-		
-    double toUSD= (Double)rate.get("USD"+currency);
-   
+
+		double toUSD= (Double)rate.get("USD"+currency);
 
 
 
-	double result= amount/toUSD*USDtoEUR;
-	JSONObject response = new JSONObject();
-	response.put("input ",amount+" "+ currency);
-	response.put("result",result+" EUR");
-	return response;
 
-	
+		double result= amount/toUSD*USDtoEUR;
+		JSONObject response = new JSONObject();
+		response.put("input ",amount+" "+ currency);
+		response.put("result",result+" EUR");
+		return response;
 
-	
-	
-}
+
+
+
+
+	}
 }
