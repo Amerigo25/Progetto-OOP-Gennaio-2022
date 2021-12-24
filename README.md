@@ -20,13 +20,13 @@ L'applicazione utilizza i dati ricevuti dall'API Currency Layer, che fornisce in
 A partire dai dati ricevuti l'applicazione offre diverse funzionalità per poter effettuare un'analisi storica delle valute.
 ## Funzioni 
 * **Tasso di cambio storico**
-  In un giorno a scelta dell'utente dal 1990 ad oggi, su un set di valute scelto dall'utente, rispetto all'USD.
+  in un giorno a scelta dell'utente (dal 1990 ad oggi), su un set di valute scelto dall'utente, rispetto all'USD.
 * **Convertitore in euro**
- Di un qualsiasi ammontare di una certa valuta in un giorno scelto dall'utente con riferimento al tasso storico di quel giorno.
+ di un qualsiasi ammontare di una certa valuta in un giorno scelto dall'utente con riferimento al tasso storico di quel giorno.
 * **Statistiche annuali**
- Media,varianza e scostamento medio del valore in dollari di un set di valute all'interno di un anno solare.
+ media,varianza e scostamento medio del valore in dollari di un set di valute all'interno di un anno solare.
 * **Statistiche mensili**
- Media,varianza e scostamento medio del valore in dollari di un set di valute nello stesso mese di diversi anni, per valutare il miglior periodo di investimento.
+ media,varianza e scostamento medio del valore in dollari di un set di valute nello stesso mese di diversi anni, per valutare il miglior periodo di investimento.
 <a name="warn"></a>
 ## Avvertenze :warning:
 Il programma è stato realizzato per un progetto d'esame universitario e sfrutta il pacchetto gratuito dell'API Currency Layer. Questo pacchetto permette all'utente di richiedere informazioni solamente su un singolo giorno, e non su un lasso di tempo entro due date (funzione a pagamento).
