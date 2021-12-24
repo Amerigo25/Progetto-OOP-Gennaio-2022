@@ -4,7 +4,7 @@ L'applicazione nasce con l'obiettivo di fornire uno strumento tecnico che possa 
 # Contenuti :
 
 * [Descrizione](#intro)
-* [Funzioni dell'applicazione](#plus)
+* [Avvertenze](#warn)
 * [Rotte](#rotte)
 * [Parametri](#param)
 * [Formato restituto](#form)
@@ -17,9 +17,7 @@ L'applicazione nasce con l'obiettivo di fornire uno strumento tecnico che possa 
 L'applicazione utilizza i dati ricevuti dall'API Currency Layer, che fornisce informazioni aggiornate quotidianamente sul valore di più di 160 valute in tutto il mondo, inclusi due metalli preziosi, rispetto al dollaro statunitense. 
 **Una lista di tutte le valute supportate con il relativo codice identificativo (tre lettere in maiuscolo) da inserire nell'app è disponibile al seguente link: https://currencylayer.com/currencies .**
 
-L'utente può effettuare un analisi storica richiedendo all'API il valore del tasso di cambio di una valuta rispetto al dollaro in un qualsiasi giorno nell'arco di tempo che va dal 1990 ad oggi.
-A partire dai dati ricevuti si possono effettuare statistiche sull'andamento di un insieme di valute inserite in input, nei diversi mesi o anni dell'analisi storica, sempre rispetto all'USD (dollaro statunitense).
-<a name="plus"></a>
+A partire dai dati ricevuti l'applicazione offre diverse funzionalità per poter effettuare un'analisi storica delle valute.
 ## Funzioni 
 * **Tasso di cambio storico**
   In un giorno a scelta dell'utente dal 1990 ad oggi, su un set di valute scelto dall'utente, rispetto all'USD.
@@ -29,7 +27,7 @@ A partire dai dati ricevuti si possono effettuare statistiche sull'andamento di 
  Media,varianza e scostamento medio del valore in dollari di un set di valute all'interno di un anno solare.
 * **Statistiche mensili**
  Media,varianza e scostamento medio del valore in dollari di un set di valute nello stesso mese di diversi anni, per valutare il miglior periodo di investimento.
-
+<a name="warn"></a>
 ## Avvertenze :warning:
 Il programma è stato realizzato per un progetto d'esame universitario e sfrutta il pacchetto gratuito dell'API Currency Layer. Questo pacchetto permette all'utente di richiedere informazioni solamente su un singolo giorno, e non su un lasso di tempo entro due date (funzione a pagamento).
 Per questo motivo per provare il funzionamento delle statistiche su periodi estesi l'applicazione sfrutta un file incluso nella directory del programma **"quotes.list.txt**, dove sono stati salvati dati relativi al valore di 3 valute: *EUR,GBP,BTC* (uniche ammesse per le rotte /stats)  
