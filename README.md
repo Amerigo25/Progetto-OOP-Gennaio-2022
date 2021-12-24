@@ -30,8 +30,7 @@ A partire dai dati ricevuti l'applicazione offre diverse funzionalità per poter
 <a name="warn"></a>
 ## Avvertenze :warning:
 Il programma è stato realizzato per un progetto d'esame universitario e sfrutta il pacchetto gratuito dell'API Currency Layer. Questo pacchetto permette all'utente di richiedere informazioni solamente su un singolo giorno, e non su un lasso di tempo entro due date (funzione a pagamento).
-Per questo motivo per provare il funzionamento delle statistiche su periodi estesi l'applicazione sfrutta un file incluso nella directory del programma **"quotes.list.txt**, dove sono stati salvati dati relativi al valore di 3 valute: *EUR,GBP,BTC* (uniche ammesse per le rotte /stats)  
-nei 12 mesi degli ultimi 3 anni: *2019,2020,2021* (unici ammessi per la rotta /stats/year).
+Per questo motivo per provare il funzionamento delle statistiche su periodi estesi l'applicazione sfrutta un file incluso nella directory del programma **"quotes.list.txt**, dove sono stati salvati dati relativi al valore di 3 valute: ***EUR,GBP,BTC* (uniche ammesse per le rotte /stats) nei 12 mesi degli ultimi 3 anni: *2019,2020,2021* (unici ammessi per la rotta /stats/year).
 L'utente che fosse interessato ad ottenere un servizio completo può liberamente acquistare la versione a pagamento dell'API ed effettuare una lieve modifica al codice, che invece di andare a leggere da file locale i dati per il calcolo delle statistiche andrebbe a chiederli direttamente all'API come fa già per le funzioni gratuite.
 Infine si ricorda che per utilizzare il programma si deve modificare la variabile "key" nella classe HistoricalRate contenuta nel package CurrencyLayer\src\main\java\com\progettoOOP\CurrencyLayer\service sostituendola con la propria key ottenibile gratuitamente iscrivendosi su https://currencylayer.com/product.
 
