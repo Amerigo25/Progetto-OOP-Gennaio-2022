@@ -9,7 +9,6 @@ L'applicazione nasce con l'obiettivo di fornire uno strumento tecnico che possa 
 * [Parametri](#param)
 * [Formato restituto](#form)
 * [Test](#test)
-* [Documentazione](#doc)
 * [Autori](#autor)
 
 <a name="intro"></a>
@@ -31,7 +30,7 @@ A partire dai dati ricevuti si possono effettuare statistiche sull'andamento di 
 * **Statistiche mensili**
  Media,varianza e scostamento medio del valore in dollari di un set di valute nello stesso mese di diversi anni, per valutare il miglior periodo di investimento.
 
-# Avvertenze :warning:
+## Avvertenze :warning:
 Il programma è stato realizzato per un progetto d'esame universitario e sfrutta il pacchetto gratuito dell'API Currency Layer. Questo pacchetto permette all'utente di richiedere informazioni solamente su un singolo giorno, e non su un lasso di tempo entro due date (funzione a pagamento).
 Per questo motivo per provare il funzionamento delle statistiche su periodi estesi l'applicazione sfrutta un file incluso nella directory del programma **"quotes.list.txt**, dove sono stati salvati dati relativi al valore di 3 valute: *EUR,GBP,BTC* (uniche ammesse per le rotte /stats)  
 nei 12 mesi degli ultimi 3 anni: *2019,2020,2021* (unici ammessi per la rotta /stats/year).
@@ -155,9 +154,18 @@ N° | Parametri | Tipo | Valore di default |
 ]
 ```
 
+<a name="test"></a>
+## Test
+Per verificare il funzionamento del programma sono state implementate 3 classi di test tramite utilizzo del framework JUNIT.
+* **HistoricalRateTest** verifica la correttezza della chiamata API e del salvataggio della risposta in un JSONObject-
+* **FileReadTest** verifica la correttezza della lettura da file e del salvataggio del contenuto in un JSONArray.
+* **FilterTest** verifica la correttezza del metodo di filtraggio che dal JSONArray salva i valori dei tassi di cambio su un Vector di variabili Double.
 
 
-
-
+<a name="author"></a>
+## Author
+Il progetto è stato sviluppato con equa suddivisione del lavoro da
+* [Amerigo Aloisi](https://github.com/Amerigo25)
+* [Marco Di Vita](https://github.com/likaj6638)
 
 
