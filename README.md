@@ -18,7 +18,7 @@ L'applicazione utilizza i dati ricevuti dall'API Currency Layer, che fornisce in
 **Una lista di tutte le valute supportate con il relativo codice identificativo (tre lettere in maiuscolo) da inserire nell'app è disponibile al seguente link: https://currencylayer.com/currencies .**
 
 A partire dai dati ricevuti l'applicazione offre diverse funzionalità per poter effettuare un'analisi storica delle valute.
-## Funzioni 
+# Funzioni 
 * **Tasso di cambio storico**
   in un giorno a scelta dell'utente (dal 1990 ad oggi), su un set di valute scelto dall'utente, rispetto all'USD.
 * **Convertitore in euro**
@@ -30,7 +30,7 @@ A partire dai dati ricevuti l'applicazione offre diverse funzionalità per poter
 <a name="warn"></a>
 ## Avvertenze :warning:
 Il programma è stato realizzato per un progetto d'esame universitario e sfrutta il pacchetto gratuito dell'API Currency Layer. Questo pacchetto permette all'utente di richiedere informazioni solamente su un singolo giorno, e non su un lasso di tempo entro due date (funzione a pagamento).
-Per questo motivo per provare il funzionamento delle statistiche su periodi estesi l'applicazione sfrutta un file incluso nella directory del programma **"quotes.list.txt**, dove sono stati salvati dati relativi al valore di 3 valute: ***EUR,GBP,BTC* (uniche ammesse per le rotte /stats) nei 12 mesi degli ultimi 3 anni: *2019,2020,2021* (unici ammessi per la rotta /stats/year).
+Per questo motivo per provare il funzionamento delle statistiche su periodi estesi l'applicazione sfrutta un file incluso nella directory del programma **"quotes.list.txt**, dove sono stati salvati dati relativi al valore di 3 valute: ***EUR,GBP,BTC* (uniche ammesse per le rotte /stats) nei 12 mesi degli ultimi 3 anni: *2019,2020,2021* (unici ammessi per la rotta /stats/year).**
 L'utente che fosse interessato ad ottenere un servizio completo può liberamente acquistare la versione a pagamento dell'API ed effettuare una lieve modifica al codice, che invece di andare a leggere da file locale i dati per il calcolo delle statistiche andrebbe a chiederli direttamente all'API come fa già per le funzioni gratuite.
 Infine si ricorda che per utilizzare il programma si deve modificare la variabile "key" nella classe HistoricalRate contenuta nel package CurrencyLayer\src\main\java\com\progettoOOP\CurrencyLayer\service sostituendola con la propria key ottenibile gratuitamente iscrivendosi su https://currencylayer.com/product.
 
@@ -163,6 +163,6 @@ Per verificare il funzionamento del programma sono state implementate 3 classi d
 ## Author
 Il progetto è stato sviluppato con equa suddivisione del lavoro da
 * [Amerigo Aloisi](https://github.com/Amerigo25)
-* [Kristian Likaj](https://github.com/likaj6638)
+* [Kristian Likaj](https://github.com/lilkaj6638)
 
 
