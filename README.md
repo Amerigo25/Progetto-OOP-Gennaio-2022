@@ -163,6 +163,6 @@ Per verificare il funzionamento del programma sono state implementate 3 classi d
 ## Author
 Il progetto è stato sviluppato con equa suddivisione del lavoro da
 * [Amerigo Aloisi](https://github.com/Amerigo25)
-* [Marco Di Vita](https://github.com/likaj6638)
+* [Kristian Likaj](https://github.com/likaj6638)
 
 
