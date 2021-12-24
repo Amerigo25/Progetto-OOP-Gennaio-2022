@@ -18,7 +18,7 @@ L'applicazione utilizza i dati ricevuti dall'API Currency Layer, che fornisce in
 **Una lista di tutte le valute supportate con il relativo codice identificativo (tre lettere in maiuscolo) da inserire nell'app è disponibile al seguente link: https://currencylayer.com/currencies .**
 
 A partire dai dati ricevuti l'applicazione offre diverse funzionalità per poter effettuare un'analisi storica delle valute.
-# Funzioni 
+### Funzioni 
 * **Tasso di cambio storico**
   in un giorno a scelta dell'utente (dal 1990 ad oggi), su un set di valute scelto dall'utente, rispetto all'USD.
 * **Convertitore in euro**
