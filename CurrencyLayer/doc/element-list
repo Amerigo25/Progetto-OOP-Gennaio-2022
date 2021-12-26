@@ -1,1 +1,6 @@
+com.progettoOOP.CurrencyLayer
+com.progettoOOP.CurrencyLayer.controller
+com.progettoOOP.CurrencyLayer.model
+com.progettoOOP.CurrencyLayer.service
+com.progettoOOP.CurrencyLayer.test
 com.progettoOOP.CurrencyLayer.util
