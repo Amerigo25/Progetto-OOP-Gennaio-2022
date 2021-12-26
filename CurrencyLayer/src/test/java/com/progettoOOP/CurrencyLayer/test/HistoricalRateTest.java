@@ -8,9 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import com.progettoOOP.CurrencyLayer.service.HistoricalRate;
-
-import exceptions.WrongRequestException;
-
+import com.progettoOOP.CurrencyLayer.exceptions.WrongRequestException;
 import com.progettoOOP.CurrencyLayer.model.*;
 /**
  * Questa classe testa il metodo che effettua la chiamata API salvandola su un JSONObject, da cui poi  preleva  i campi di interesse

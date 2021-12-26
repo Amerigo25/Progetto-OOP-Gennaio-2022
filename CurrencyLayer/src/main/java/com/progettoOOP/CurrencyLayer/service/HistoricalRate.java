@@ -10,9 +10,10 @@ import org.json.simple.JSONObject;
 
 import org.json.simple.parser.ParseException;
 
+import com.progettoOOP.CurrencyLayer.exceptions.WrongRequestException;
 import com.progettoOOP.CurrencyLayer.model.Quotes;
 
-import exceptions.WrongRequestException;
+
 
 import org.json.simple.JSONValue;
 /**

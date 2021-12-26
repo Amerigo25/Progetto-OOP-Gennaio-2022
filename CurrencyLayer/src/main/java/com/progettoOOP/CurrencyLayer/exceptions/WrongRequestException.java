@@ -1,4 +1,4 @@
-package exceptions;
+package com.progettoOOP.CurrencyLayer.exceptions;
 
 public class WrongRequestException extends Exception {
 	/** Eccezione personalizzata che viene lanciata se l'utente inserisce un codice per la valuta non presente 

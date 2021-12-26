@@ -2,7 +2,8 @@ package com.progettoOOP.CurrencyLayer.service;
 
 import org.json.simple.JSONObject;
 
-import exceptions.WrongRequestException;
+import com.progettoOOP.CurrencyLayer.exceptions.WrongRequestException;
+
 /**
  * Interfaccia che contiene i metodi per la chiamata API
  * @author Amerigo Aloisi

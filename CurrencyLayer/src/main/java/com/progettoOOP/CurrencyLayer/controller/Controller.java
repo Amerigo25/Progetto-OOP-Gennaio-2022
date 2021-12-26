@@ -4,7 +4,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.progettoOOP.CurrencyLayer.service.HistoricalRate;
-
+import com.progettoOOP.CurrencyLayer.exceptions.WrongRequestException;
 import com.progettoOOP.CurrencyLayer.model.Day;
 import com.progettoOOP.CurrencyLayer.model.EURConverter;
 import com.progettoOOP.CurrencyLayer.model.Quotes;
@@ -12,7 +12,6 @@ import com.progettoOOP.CurrencyLayer.util.Filter;
 import com.progettoOOP.CurrencyLayer.util.FilterbyMonth;
 import com.progettoOOP.CurrencyLayer.util.FilterbyYear;
 
-import exceptions.WrongRequestException;
 
 import org.springframework.http.HttpStatus;
 /**
