@@ -1,6 +1,8 @@
 package com.progettoOOP.CurrencyLayer.service;
 
 import org.json.simple.JSONObject;
+
+import exceptions.WrongRequestException;
 /**
  * Interfaccia che contiene i metodi per la chiamata API
  * @author Amerigo Aloisi
@@ -18,7 +20,7 @@ public interface HistoricalRateService {
 	 * salva in un altro JSONObject specificando la data di riferimento
 	 * @return JSONObject con i campi di interesse
 	 */
-	public abstract JSONObject getQuotes();
+	public abstract JSONObject getQuotes() throws WrongRequestException;
 
 
 

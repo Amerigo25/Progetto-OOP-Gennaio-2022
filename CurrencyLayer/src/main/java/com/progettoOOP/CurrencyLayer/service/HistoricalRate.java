@@ -12,6 +12,8 @@ import org.json.simple.parser.ParseException;
 
 import com.progettoOOP.CurrencyLayer.model.Quotes;
 
+import exceptions.WrongRequestException;
+
 import org.json.simple.JSONValue;
 /**
  * Questa classe implementa la relativa interfaccia
@@ -71,16 +73,22 @@ public class HistoricalRate implements HistoricalRateService{
 	/**
 	 * Questo metodo richiama il metodo precedente, in seguito crea un JSONObject contenente 
 	 * i valori di interesse della risposta totale dell'API (Key:"Quotes") e la data a cui fanno 
-	 * riferimento (presa come parametro dall'oggetto Quotes)
+	 * riferimento (presa come parametro dall'oggetto Quotes).
+	 * @throws WrongRequestException 
 	 */
 	@Override
 	@SuppressWarnings("unchecked")
 
-	public JSONObject getQuotes() {
+	public JSONObject getQuotes() throws WrongRequestException {
 		JSONObject obj = getJSON();
 		JSONObject ex_rates= new JSONObject();
-		ex_rates.put("Quotes",obj.get("quotes"));
-		ex_rates.put("Date", quotes.getDay().toString());
+		if((obj.get("quotes")!=null)) {
+			ex_rates.put("Quotes",obj.get("quotes"));
+			ex_rates.put("Date", quotes.getDay().toString());}
+		else {
+			throw new WrongRequestException("Errore: hai inserito una valuta o una data non valida");
+		}
+
 		return ex_rates;
 	}
 

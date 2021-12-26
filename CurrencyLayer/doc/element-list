@@ -4,3 +4,4 @@ com.progettoOOP.CurrencyLayer.model
 com.progettoOOP.CurrencyLayer.service
 com.progettoOOP.CurrencyLayer.test
 com.progettoOOP.CurrencyLayer.util
+exceptions

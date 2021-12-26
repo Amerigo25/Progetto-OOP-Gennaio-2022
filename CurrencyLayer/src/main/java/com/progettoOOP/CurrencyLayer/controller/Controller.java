@@ -12,6 +12,8 @@ import com.progettoOOP.CurrencyLayer.util.Filter;
 import com.progettoOOP.CurrencyLayer.util.FilterbyMonth;
 import com.progettoOOP.CurrencyLayer.util.FilterbyYear;
 
+import exceptions.WrongRequestException;
+
 import org.springframework.http.HttpStatus;
 /**
  * Controller che gestisce tutte le rotte disponibili
@@ -29,6 +31,7 @@ public class Controller {
 	 * @param month mese della data di interesse, formato mm
 	 * @param day giorno della data di interesse, formato dd
 	 * @return un JSONObject con keys "Quotes" e "Date"
+	 * @throws WrongRequestException 
 	 */
 	@GetMapping("/exchange")
 
@@ -36,7 +39,7 @@ public class Controller {
 			@RequestParam (name= "currency_list", defaultValue = "BTC,EUR,GBP") String currency_list,
 			@RequestParam (name = "year", defaultValue = "2021") int year, 
 			@RequestParam (name = "month", defaultValue = "01") String month,
-			@RequestParam (name = "day", defaultValue = "01") String day)
+			@RequestParam (name = "day", defaultValue = "01") String day) throws WrongRequestException
 	{
 		HistoricalRate h = new HistoricalRate(new Quotes(currency_list,new Day(year,month,day)));
 
@@ -93,6 +96,7 @@ public class Controller {
 	 * @param month mese di riferimento
 	 * @param day giorno di riferimento
 	 * @return un JSONObject contenente il risultato della conversione
+	 * @throws WrongRequestException 
 	 */
 
 
@@ -102,7 +106,7 @@ public class Controller {
 			@RequestParam (name="amount",defaultValue="1.00") double amount,
 			@RequestParam (name = "year", defaultValue = "2021") int year, 
 			@RequestParam (name = "month", defaultValue = "01") String month,
-			@RequestParam (name = "day", defaultValue = "01") String day)
+			@RequestParam (name = "day", defaultValue = "01") String day) throws WrongRequestException
 	{
 		HistoricalRate h = new HistoricalRate(new Quotes(currency,new Day(year,month,day)));
 		EURConverter converter = new EURConverter(h.getQuotes(),currency,amount);
