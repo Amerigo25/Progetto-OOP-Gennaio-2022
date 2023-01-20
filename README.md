@@ -41,7 +41,7 @@ Le richieste vanno effettuate all'indirizzo http://localhost:8080
 N° | Tipo | Rotta | Descrizione
 ----- | ------------ | -------------------- | ----------------------
 [1](#1) | ` GET ` | `/exhcange` | *restituisce un JSONObject contenente i tassi di cambio delle valute richieste, al giorno indicato*
-[2](#2) | ` GET ` | `/convert` | *restituisce un JSONObject contente il risultato della conversione in euro al giorno indicato*
+[2](#2) | ` GET ` | `/convert` | *restituisce un JSONObject contenente il risultato della conversione in euro al giorno indicato*
 [3](#3) | ` GET ` | `/stats` | *restituisce un JSONObject contenente le statistiche filtrate per il periodo di default (ultimi tre anni)*
 [4](#4) | ` GET ` | `/stats/year` | *restituisce un JSONObject contenente le statistiche filtrate per l'anno scelto*
 [5](#5) | ` GET ` | `/stats/month` | *restituisce un JSONObject contenente le statistiche filtrate per il mese scelto*
